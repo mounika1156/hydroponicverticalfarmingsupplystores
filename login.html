@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | GreenGrow</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<main class="login-page">
+
+  <!-- TOP CONTROLS -->
+  <div class="login-controls">
+    <button type="button" id="rtlToggle" title="Toggle RTL">
+      <i class="bi bi-arrow-left-right"></i>
+    </button>
+
+    <button type="button" id="themeToggle" title="Toggle dark mode">
+      <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+    </button>
+  </div>
+
+
+  <div class="login-wrapper">
+
+    <!-- =========================
+         LEFT TEXT SIDE
+    ========================== -->
+    <section class="login-info">
+
+      <div class="info-content">
+
+        <a href="index.html" class="info-logo">
+          <img src="images/logo-1.png"
+               alt="GreenGrow">
+        </a>
+
+        <span class="info-eyebrow">
+          GREENGROW FARMING SOLUTIONS
+        </span>
+
+        <h1>
+          Grow Smarter.
+          <span>Grow Better.</span>
+        </h1>
+
+        <p>
+          Manage your GreenGrow account and explore smarter
+          hydroponic and vertical farming solutions designed
+          for modern growing.
+        </p>
+
+        <div class="info-points">
+
+          <div class="info-point">
+            <span class="point-icon">
+              <i class="bi bi-droplet-half"></i>
+            </span>
+
+            <div>
+              <strong>Hydroponic Solutions</strong>
+              <small>
+                Efficient systems for soil-free growing.
+              </small>
+            </div>
+          </div>
+
+
+          <div class="info-point">
+            <span class="point-icon">
+              <i class="bi bi-grid-3x3-gap"></i>
+            </span>
+
+            <div>
+              <strong>Vertical Farming</strong>
+              <small>
+                Grow more using less growing space.
+              </small>
+            </div>
+          </div>
+
+
+          <div class="info-point">
+            <span class="point-icon">
+              <i class="bi bi-box-seam"></i>
+            </span>
+
+            <div>
+              <strong>Growing Products</strong>
+              <small>
+                Systems, nutrients, lighting and essentials.
+              </small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="info-bottom">
+        <span>SMART FARMING</span>
+        <span>•</span>
+        <span>MODERN GROWING</span>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RIGHT LOGIN SIDE
+    ========================== -->
+    <section class="login-form-side">
+
+      <div class="login-card">
+
+        <a href="index.html" class="mobile-logo">
+          <img src="images/logo-1.png" alt="GreenGrow">
+        </a>
+
+        <div class="login-heading">
+
+          <span>CUSTOMER ACCOUNT</span>
+
+          <h2>
+            Welcome <b>Back.</b>
+          </h2>
+
+          <p>
+            Sign in to continue to your GreenGrow account.
+          </p>
+
+        </div>
+
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+
+          <!-- EMAIL -->
+          <div class="field">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <div class="input-field">
+
+              <i class="bi bi-envelope"></i>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- PASSWORD -->
+          <div class="field">
+
+            <label for="password">
+              Password
+            </label>
+
+            <div class="input-field">
+
+              <i class="bi bi-lock"></i>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-eye"
+                id="passwordToggle"
+                aria-label="Show password"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- OPTIONS -->
+          <div class="login-options">
+
+            <label class="remember">
+
+              <input type="checkbox">
+
+              <span class="custom-check"></span>
+
+              <span>Remember Me</span>
+
+            </label>
+
+            <a href="forgot-password.html">
+              Forgot Password?
+            </a>
+
+          </div>
+
+
+          <!-- SIGN IN -->
+          <button type="submit" class="login-button">
+
+            <span>Sign In</span>
+
+            <i class="bi bi-arrow-up-right"></i>
+
+          </button>
+
+        </form>
+
+
+        <!-- SIGN UP -->
+        <div class="signup-row">
+
+          <span>Don't have an account?</span>
+
+          <a href="signup.html">
+            Create Account
+          </a>
+
+        </div>
+
+
+        <!-- DIVIDER -->
+        <div class="divider">
+          <span>OR CONTINUE WITH</span>
+        </div>
+
+
+        <!-- SOCIAL LOGIN -->
+        <div class="social-login">
+
+          <!-- GOOGLE -->
+          <button
+            type="button"
+            class="social-button"
+            data-provider="Google"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4"
+                d="M21.35 12.27c0-.72-.06-1.42-.18-2.09H12v3.95h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.25z"/>
+              <path fill="#34A853"
+                d="M12 21.82c2.63 0 4.84-.87 6.45-2.35l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.55 0-4.71-1.72-5.49-4.04H3.27v2.53A9.75 9.75 0 0 0 12 21.82z"/>
+              <path fill="#FBBC05"
+                d="M6.51 13.9a5.86 5.86 0 0 1 0-3.76V7.61H3.27a9.82 9.82 0 0 0 0 8.82l3.24-2.53z"/>
+              <path fill="#EA4335"
+                d="M12 6.1c1.43 0 2.72.49 3.74 1.46l2.8-2.8C16.84 3.17 14.63 2.18 12 2.18a9.75 9.75 0 0 0-8.73 5.43l3.24 2.53C7.29 7.82 9.45 6.1 12 6.1z"/>
+            </svg>
+
+            <span>Google</span>
+          </button>
+
+
+          <!-- FACEBOOK -->
+          <button
+            type="button"
+            class="social-button"
+            data-provider="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#1877F2"
+                d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.09 4.39 23.08 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.34l-.53 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07z"/>
+            </svg>
+
+            <span>Facebook</span>
+          </button>
+
+
+          <!-- APPLE -->
+          <button
+            type="button"
+            class="social-button"
+            data-provider="Apple"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M16.7 12.8c0-2.4 2-3.6 2.1-3.7-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.7.9-3.4.9-.7 0-1.8-.9-3-.9-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 3-.7 1.4 0 1.8.7 3 .7 1.2 0 2-.9 2.7-2.1.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.5-1-2.5-3.2zM14.5 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3z"/>
+            </svg>
+
+            <span>Apple</span>
+          </button>
+
+        </div>
+
+
+        <p class="terms">
+          By continuing, you agree to our
+          <a href="#">Terms</a>
+          and
+          <a href="#">Privacy Policy</a>.
+        </p>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+<script src="login.js"></script>
+
+</body>
+</html>
