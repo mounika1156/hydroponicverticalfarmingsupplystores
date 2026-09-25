@@ -28,9 +28,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelectorAll(".policy-nav a");
 
 
-  /* =====================================
-     THEME
-  ====================================== */
 
   const savedTheme =
     localStorage.getItem("greengrow-theme");
@@ -105,9 +102,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =====================================
-     RTL
-  ====================================== */
 
   const savedDirection =
     localStorage.getItem(
@@ -169,9 +163,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =====================================
-     MOBILE POLICY MENU
-  ====================================== */
 
   if(mobileToggle){
 
@@ -226,9 +217,6 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 
-  /* =====================================
-     ACTIVE SIDEBAR LINK
-  ====================================== */
 
   const sections =
     document.querySelectorAll(
@@ -290,9 +278,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =====================================
-     BACK TO TOP
-  ====================================== */
 
   window.addEventListener(
     "scroll",

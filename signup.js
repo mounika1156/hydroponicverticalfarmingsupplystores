@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("confirmPasswordToggle");
 
 
-  /* =================================
-     THEME
-  ================================= */
-
   const savedTheme =
     localStorage.getItem("greengrow-theme");
 
@@ -96,9 +92,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =================================
-     RTL
-  ================================= */
 
   const savedDirection =
     localStorage.getItem("greengrow-direction");
@@ -144,9 +137,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =================================
-     PASSWORD TOGGLE
-  ================================= */
 
   function setupPasswordToggle(
     input,
@@ -203,9 +193,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =================================
-     SOCIAL SIGN UP
-  ================================= */
 
   document
     .querySelectorAll(".social-signup")
@@ -241,10 +228,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     });
 
-
-  /* =================================
-     FORM SUBMIT
-  ================================= */
 
   signupForm.addEventListener(
     "submit",

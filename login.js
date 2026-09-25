@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", function(){
   const loginForm = document.getElementById("loginForm");
 
 
-  /* =========================
-     THEME
-  ========================== */
 
   const savedTheme =
     localStorage.getItem("greengrow-theme");
@@ -74,10 +71,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =========================
-     RTL
-  ========================== */
-
   const savedDirection =
     localStorage.getItem("greengrow-direction");
 
@@ -113,10 +106,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =========================
-     PASSWORD SHOW / HIDE
-  ========================== */
-
   passwordToggle.addEventListener(
     "click",
     function(){
@@ -144,9 +133,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =========================
-     SOCIAL BUTTONS
-  ========================== */
 
   document
     .querySelectorAll(".social-button")
@@ -176,10 +162,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     });
 
-
-  /* =========================
-     LOGIN FORM
-  ========================== */
 
   loginForm.addEventListener(
     "submit",

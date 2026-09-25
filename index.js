@@ -1,11 +1,4 @@
-/* =========================================================
-   GREENGROW HEADER JAVASCRIPT
-========================================================= */
 
-
-/* =========================================================
-   ELEMENTS
-========================================================= */
 
 const body = document.body;
 
@@ -275,9 +268,6 @@ window.addEventListener("resize", function () {
 
 
 
-/* =========================================================
-   GREENGROW AUTOMATIC ACTIVE PAGE
-========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -291,9 +281,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".nav-dropdown-toggle");
 
 
-    /* =====================================================
-       GET CURRENT PAGE
-    ===================================================== */
 
     let currentPage =
         window.location.pathname
@@ -317,10 +304,6 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage = "index.html";
     }
 
-
-    /* =====================================================
-       REMOVE OLD ACTIVE
-    ===================================================== */
 
     navLinks.forEach(function (link) {
 
@@ -348,10 +331,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
-    /* =====================================================
-       CHECK NORMAL NAV LINKS
-    ===================================================== */
 
     navLinks.forEach(function (link) {
 
@@ -382,10 +361,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        /* =================================================
-           MATCH CURRENT PAGE
-        ================================================= */
-
         if (linkPage === currentPage) {
 
             link.classList.add("active");
@@ -400,9 +375,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================================
-       CHECK HOME DROPDOWN
-    ===================================================== */
 
     let homePageSelected = false;
 
@@ -428,9 +400,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        /* =================================================
-           HOME PAGE MATCH
-        ================================================= */
 
         if (linkPage === currentPage) {
 
@@ -447,13 +416,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-    /* =====================================================
-       KEEP HOME ACTIVE
-
-       index.html
-       home-2.html
-    ===================================================== */
 
     if (
         homePageSelected &&
@@ -484,37 +446,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const faqItems = document.querySelectorAll(".classic-faq-item");
-
-    faqItems.forEach(function (item) {
-
-        const button = item.querySelector(".classic-faq-question");
-
-        button.addEventListener("click", function () {
-
-            const isActive = item.classList.contains("active");
-
-            /* Close all */
-            faqItems.forEach(function (faq) {
-                faq.classList.remove("active");
-            });
-
-            /* Open clicked item */
-            if (!isActive) {
-                item.classList.add("active");
-            }
-
-        });
-
-    });
-
-});
 
 
 

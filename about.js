@@ -1,11 +1,4 @@
-/* =========================================================
-   GREENGROW HEADER JAVASCRIPT
-========================================================= */
 
-
-/* =========================================================
-   ELEMENTS
-========================================================= */
 
 const body = document.body;
 
@@ -27,9 +20,8 @@ const dropdownToggle =
     document.querySelector(".nav-dropdown-toggle");
 
 
-/* =========================================================
-   DARK / LIGHT MODE
-========================================================= */
+
+
 
 const savedTheme =
     localStorage.getItem("greengrow-theme");
@@ -50,10 +42,6 @@ if (savedTheme === "dark") {
         "bi bi-moon-stars-fill";
 }
 
-
-/* =========================================================
-   THEME TOGGLE
-========================================================= */
 
 themeToggle.addEventListener("click", function () {
 
@@ -92,9 +80,6 @@ themeToggle.addEventListener("click", function () {
 });
 
 
-/* =========================================================
-   RTL TOGGLE
-========================================================= */
 
 rtlToggle.addEventListener("click", function () {
 
@@ -130,9 +115,6 @@ rtlToggle.addEventListener("click", function () {
 });
 
 
-/* =========================================================
-   LOAD RTL
-========================================================= */
 
 const savedDirection =
     localStorage.getItem("greengrow-direction");
@@ -147,10 +129,6 @@ if (savedDirection) {
 
 }
 
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
 
 menuToggle.addEventListener("click", function () {
 
@@ -190,9 +168,6 @@ menuToggle.addEventListener("click", function () {
 });
 
 
-/* =========================================================
-   MOBILE HOME DROPDOWN
-========================================================= */
 
 dropdownToggle.addEventListener("click", function (event) {
 
@@ -207,9 +182,6 @@ dropdownToggle.addEventListener("click", function (event) {
 });
 
 
-/* =========================================================
-   CLOSE MOBILE MENU WHEN LINK IS CLICKED
-========================================================= */
 
 const navLinks =
     document.querySelectorAll(
@@ -246,9 +218,6 @@ navLinks.forEach(function (link) {
 });
 
 
-/* =========================================================
-   CLOSE MENU WHEN RESIZING TO DESKTOP
-========================================================= */
 
 window.addEventListener("resize", function () {
 
@@ -283,9 +252,6 @@ window.addEventListener("resize", function () {
 
 
 
-/* =========================================================
-   GREENGROW AUTOMATIC ACTIVE PAGE
-========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -298,10 +264,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const homeButton =
         document.querySelector(".nav-dropdown-toggle");
 
-
-    /* =====================================================
-       GET CURRENT PAGE
-    ===================================================== */
 
     let currentPage =
         window.location.pathname
@@ -326,9 +288,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================================
-       REMOVE OLD ACTIVE
-    ===================================================== */
 
     navLinks.forEach(function (link) {
 
@@ -356,10 +315,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
-    /* =====================================================
-       CHECK NORMAL NAV LINKS
-    ===================================================== */
 
     navLinks.forEach(function (link) {
 
@@ -390,9 +345,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        /* =================================================
-           MATCH CURRENT PAGE
-        ================================================= */
 
         if (linkPage === currentPage) {
 
@@ -408,9 +360,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================================
-       CHECK HOME DROPDOWN
-    ===================================================== */
 
     let homePageSelected = false;
 
@@ -436,10 +385,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        /* =================================================
-           HOME PAGE MATCH
-        ================================================= */
-
         if (linkPage === currentPage) {
 
             link.classList.add("active");
@@ -455,13 +400,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-    /* =====================================================
-       KEEP HOME ACTIVE
-
-       index.html
-       home-2.html
-    ===================================================== */
 
     if (
         homePageSelected &&
@@ -488,18 +426,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================================
-       HERO ELEMENTS
-    ========================================= */
 
     const hero = document.querySelector(".premium-hero");
 
     if (!hero) return;
 
 
-    /* =========================================
-       ANIMATED COUNTERS
-    ========================================= */
 
     const counters = hero.querySelectorAll(".counter");
 
@@ -579,9 +511,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =========================================
-       MOUSE PARALLAX
-    ========================================= */
 
     const visual =
         hero.querySelector(".premium-hero-visual");
@@ -674,9 +603,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================
-       BUTTON RIPPLE
-    ========================================= */
 
     const buttons =
         hero.querySelectorAll(".hero-btn");
@@ -746,9 +672,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =========================================
-       SCROLL BUTTON
-    ========================================= */
+
+
 
     const scrollButton =
         hero.querySelector(".hero-scroll");
@@ -784,9 +709,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================
-       THEME CHANGE SUPPORT
-    ========================================= */
 
     const themeToggle =
         document.getElementById("themeToggle");

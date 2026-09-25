@@ -1,11 +1,4 @@
-/* =========================================================
-   GREENGROW HEADER JAVASCRIPT
-========================================================= */
 
-
-/* =========================================================
-   ELEMENTS
-========================================================= */
 
 const body = document.body;
 
@@ -27,9 +20,6 @@ const dropdownToggle =
     document.querySelector(".nav-dropdown-toggle");
 
 
-/* =========================================================
-   DARK / LIGHT MODE
-========================================================= */
 
 const savedTheme =
     localStorage.getItem("greengrow-theme");
@@ -51,9 +41,6 @@ if (savedTheme === "dark") {
 }
 
 
-/* =========================================================
-   THEME TOGGLE
-========================================================= */
 
 themeToggle.addEventListener("click", function () {
 
@@ -92,10 +79,6 @@ themeToggle.addEventListener("click", function () {
 });
 
 
-/* =========================================================
-   RTL TOGGLE
-========================================================= */
-
 rtlToggle.addEventListener("click", function () {
 
     const currentDirection =
@@ -130,9 +113,6 @@ rtlToggle.addEventListener("click", function () {
 });
 
 
-/* =========================================================
-   LOAD RTL
-========================================================= */
 
 const savedDirection =
     localStorage.getItem("greengrow-direction");
@@ -148,9 +128,6 @@ if (savedDirection) {
 }
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
 
 menuToggle.addEventListener("click", function () {
 
@@ -190,10 +167,6 @@ menuToggle.addEventListener("click", function () {
 });
 
 
-/* =========================================================
-   MOBILE HOME DROPDOWN
-========================================================= */
-
 dropdownToggle.addEventListener("click", function (event) {
 
     event.preventDefault();
@@ -207,9 +180,6 @@ dropdownToggle.addEventListener("click", function (event) {
 });
 
 
-/* =========================================================
-   CLOSE MOBILE MENU WHEN LINK IS CLICKED
-========================================================= */
 
 const navLinks =
     document.querySelectorAll(
@@ -246,9 +216,6 @@ navLinks.forEach(function (link) {
 });
 
 
-/* =========================================================
-   CLOSE MENU WHEN RESIZING TO DESKTOP
-========================================================= */
 
 window.addEventListener("resize", function () {
 
@@ -274,9 +241,6 @@ window.addEventListener("resize", function () {
 
 
 
-/* =========================================================
-   GREENGROW AUTOMATIC ACTIVE PAGE
-========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -290,9 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".nav-dropdown-toggle");
 
 
-    /* =====================================================
-       GET CURRENT PAGE
-    ===================================================== */
 
     let currentPage =
         window.location.pathname
@@ -317,9 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================================
-       REMOVE OLD ACTIVE
-    ===================================================== */
 
     navLinks.forEach(function (link) {
 
@@ -348,9 +306,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =====================================================
-       CHECK NORMAL NAV LINKS
-    ===================================================== */
 
     navLinks.forEach(function (link) {
 
@@ -381,9 +336,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        /* =================================================
-           MATCH CURRENT PAGE
-        ================================================= */
 
         if (linkPage === currentPage) {
 
@@ -399,9 +351,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================================
-       CHECK HOME DROPDOWN
-    ===================================================== */
 
     let homePageSelected = false;
 
@@ -427,9 +376,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        /* =================================================
-           HOME PAGE MATCH
-        ================================================= */
 
         if (linkPage === currentPage) {
 
@@ -447,12 +393,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================================
-       KEEP HOME ACTIVE
-
-       index.html
-       home-2.html
-    ===================================================== */
 
     if (
         homePageSelected &&

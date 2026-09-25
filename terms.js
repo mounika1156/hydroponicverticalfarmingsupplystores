@@ -25,10 +25,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelectorAll(".terms-section");
 
 
-  /* =====================================================
-     DARK MODE
-  ====================================================== */
-
   const savedTheme =
     localStorage.getItem("greengrow-theme");
 
@@ -94,9 +90,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =====================================================
-     RTL / LTR
-  ====================================================== */
 
   const savedDirection =
     localStorage.getItem("greengrow-direction");
@@ -154,9 +147,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =====================================================
-     MOBILE TABLE OF CONTENTS
-  ====================================================== */
 
   mobileToc.addEventListener(
     "change",
@@ -188,9 +178,6 @@ document.addEventListener("DOMContentLoaded", function(){
   );
 
 
-  /* =====================================================
-     ACTIVE DESKTOP TOC
-  ====================================================== */
 
   const observer =
     new IntersectionObserver(
@@ -250,9 +237,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =====================================================
-     DESKTOP TOC SMOOTH SCROLL
-  ====================================================== */
 
   tocLinks.forEach(function(link){
 
@@ -284,9 +268,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  /* =====================================================
-     BACK TO TOP
-  ====================================================== */
 
   function updateBackTop(){
 
