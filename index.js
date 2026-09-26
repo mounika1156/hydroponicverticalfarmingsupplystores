@@ -444,6 +444,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hero = document.querySelector(".gg-home1-reveal");
+  const image = document.querySelector(".gg-reveal-image");
+  const rings = document.querySelectorAll(".gg-reveal-ring");
+
+  if (!hero || !image) return;
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) return;
+
+  hero.addEventListener("mousemove", (event) => {
+
+    const rect = hero.getBoundingClientRect();
+
+    const x =
+      (event.clientX - rect.left) /
+      rect.width -
+      0.5;
+
+    const y =
+      (event.clientY - rect.top) /
+      rect.height -
+      0.5;
+
+    image.style.setProperty(
+      "--mouse-x",
+      `${x * 12}px`
+    );
+
+    image.style.setProperty(
+      "--mouse-y",
+      `${y * 8}px`
+    );
+
+    rings.forEach((ring, index) => {
+
+      const strength = index === 0 ? 8 : 4;
+
+      ring.style.marginLeft =
+        `${x * strength}px`;
+
+      ring.style.marginTop =
+        `${y * strength}px`;
+
+    });
+
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 

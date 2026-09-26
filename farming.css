@@ -423,44 +423,83 @@ html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
     transform: translate(50%, 0);
 }
 
-.login-button {
-    width: 86px;
-    height: 40px;
+.header-actions{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:8px;
+    flex-shrink:0;
+}
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.login-button{
+    width:110px;
+    min-width:110px;
+    height:40px;
 
-    background: var(--primary);
-    color: #FFFFFF;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-    border: 1px solid var(--primary);
-    border-radius: 10px;
+    padding:0 12px;
 
-    font-size: 13px;
-    font-weight: 700;
+    background:var(--primary);
+    color:#fff;
+    border:1px solid var(--primary);
+    border-radius:10px;
 
-    cursor: pointer;
+    font-size:12px;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:.2px;
+
+    white-space:nowrap;       /* IMPORTANT */
+    word-break:keep-all;
+    overflow:hidden;
+
+    text-decoration:none;
+    text-align:center;
 
     transition:
-        background var(--transition),
-        border-color var(--transition),
-        transform var(--transition),
-        box-shadow var(--transition);
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
-
-.login-button:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(42, 157, 143, 0.20);
+.login-button:hover{
+    background:var(--secondary);
+    border-color:var(--secondary);
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(42,157,143,.18);
 }
 
+/* Medium */
+@media (max-width:1199px){
+    .login-button{
+        width:105px;
+        min-width:105px;
+        height:38px;
+        font-size:11px;
+    }
+}
 
+/* Tablet */
+@media (max-width:1023px){
+    .login-button{
+        width:100px;
+        min-width:100px;
+        height:36px;
+        font-size:11px;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .login-button{
+        display:none;
+    }
+}
 .header-icon,
 .menu-toggle {
     width: 40px;
@@ -1838,7 +1877,7 @@ html[dir="rtl"] .hero-content {
 
     border: 1px solid var(--primary);
 
-    color: var(--footer-heading);
+    color: var(--primary);
     border-radius: 20px;
 
     text-decoration: none;
@@ -3380,6 +3419,7 @@ header ul{
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-top: 40px;
   background: var(--primary);
 }
 
@@ -3452,7 +3492,7 @@ header ul{
   margin: 0;
 
   color: #fff;
-
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: clamp(48px, 6vw, 82px);
   line-height: 1.02;
   letter-spacing: -3px;
@@ -3527,14 +3567,14 @@ header ul{
 }
 
 .farming-btn-outline {
-  border: 1px solid rgba(255,255,255,.3);
-  color: white;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
   background: rgba(255,255,255,.05);
 }
 
 .farming-btn-outline:hover {
-  color:var(--secondary);
-  border-color: var(--secondary);
+  color:var(--border);
+  background-color: var(--secondary);
 
   transform: translateY(-3px);
 }
@@ -3645,7 +3685,7 @@ header ul{
   margin: 0;
 
   color: var(--text);
-
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: clamp(38px, 4.5vw, 62px);
   line-height: 1.08;
   letter-spacing: -2px;
@@ -3665,7 +3705,7 @@ header ul{
 
   color: var(--muted);
 
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -3769,10 +3809,13 @@ header ul{
 .farm-service-content h3 {
   margin: 0 0 12px;
 
-  color: var(--text);
+  color: var(--primary);
 
   font-size: 22px;
   font-weight: 750;
+}
+.farm-service-content h3:hover{
+    color: var(--secondary);
 }
 
 .farm-service-content p {
@@ -3780,7 +3823,7 @@ header ul{
 
   color: var(--muted);
 
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.75;
 }
 
@@ -3837,10 +3880,11 @@ header ul{
   grid-template-columns: 1fr 1fr;
   gap: 85px;
   align-items: center;
+
 }
 .commercial-farming-content{
     color: var(--secondary);
-   
+ 
   
   
    gap: 12px;
@@ -3880,10 +3924,24 @@ header ul{
   margin: 0;
 
   color: var(--text);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   font-size: clamp(38px, 4vw, 58px);
   line-height: 1.05;
   letter-spacing: -2px;
+}
+.farm-editorial-eyebrow{
+  display: flex;
+  padding-right: 30px;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: var(--secondary);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .commercial-farming-content h2 span {
@@ -3895,9 +3953,9 @@ header ul{
   margin: 24px 0 30px;
 
   color: var(--muted);
-
-  font-size: 14px;
-  line-height: 1.85;
+   font-family:sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .commercial-stats {
@@ -3927,12 +3985,12 @@ header ul{
 
   color: var(--secondary);
 
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .commercial-stats span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
@@ -4017,7 +4075,7 @@ header ul{
 .farm-benefit h3 {
   margin: 0 0 10px;
 
-  color: var(--text);
+  color: var(--primary);
 
   font-size: 17px;
 }
@@ -4027,7 +4085,7 @@ header ul{
 
   color: var(--muted);
 
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -4083,7 +4141,7 @@ header ul{
   margin: 0;
 
   color: var(--text);
-
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: clamp(38px, 4vw, 58px);
   line-height: 1.08;
   letter-spacing: -2px;
@@ -4100,7 +4158,7 @@ header ul{
 
   color: var(--muted);
 
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -4189,7 +4247,7 @@ header ul{
 
   color: var(--muted);
 
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -4297,7 +4355,7 @@ header ul{
   margin: 0;
 
   color: #fff;
-
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: clamp(40px, 5vw, 68px);
   line-height: 1.05;
   letter-spacing: -2.5px;

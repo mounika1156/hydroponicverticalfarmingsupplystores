@@ -426,44 +426,6 @@ html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
     transform: translate(50%, 0);
 }
 
-.login-button {
-    width: 86px;
-    height: 40px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--primary);
-    color: #FFFFFF;
-
-    border: 1px solid var(--primary);
-    border-radius: 10px;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        background var(--transition),
-        border-color var(--transition),
-        transform var(--transition),
-        box-shadow var(--transition);
-}
-
-
-
-.login-button:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(42, 157, 143, 0.20);
-}
-
 
 
 .header-icon,
@@ -1855,7 +1817,7 @@ html[dir="rtl"] .hero-content {
 
     border: 1px solid var(--primary);
 
-    color: var(--footer-heading);
+    color: var(--primary);
     border-radius: 20px;
 
     text-decoration: none;
@@ -3504,7 +3466,7 @@ body[data-theme="dark"] .popular-heading h2{
 
   width:min(1200px,calc(100% - 40px));
 
-  margin:0 auto;
+  margin:20px auto;
 
   min-height:590px;
 
@@ -3554,7 +3516,7 @@ body[data-theme="dark"] .popular-heading h2{
   margin:0 0 24px;
 
   color:#fff;
-
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size:clamp(50px,6vw,82px);
   line-height:.94;
 
@@ -3576,9 +3538,9 @@ body[data-theme="dark"] .popular-heading h2{
 
   margin:0 auto;
 
-  color:rgba(255,255,255,.82);
+  color:var(--border);
 
-  font-size:15px;
+  font-size:16px;
   line-height:1.9;
 
   text-align:center;
@@ -3646,9 +3608,9 @@ body[data-theme="dark"] .popular-heading h2{
 /* OUTLINE */
 
 .blog-btn-outline{
-  color:#fff;
+  color:var(--secondary);
 
-  border:1px solid rgba(255,255,255,.55);
+  border:1px solid var(--secondary);
 
  
 
@@ -3656,9 +3618,9 @@ body[data-theme="dark"] .popular-heading h2{
 }
 
 .blog-btn-outline:hover{
-  color:var(--secondary);
+  color:var(--border);
 
-  border-color:var(--secondary);
+  background-color:var(--secondary);
 
  
 
@@ -3808,7 +3770,7 @@ body[data-theme="dark"] .popular-heading h2{
   .blog-hero-container{
     width:min(100% - 30px,600px);
     min-height:560px;
-    padding:80px 0 70px;
+    padding:110px 0 70px;
   }
 
   .blog-hero-content{
@@ -3833,7 +3795,7 @@ body[data-theme="dark"] .popular-heading h2{
   .blog-hero p{
     max-width:540px;
 
-    font-size:13px;
+    font-size:14px;
     line-height:1.75;
   }
 
@@ -3900,7 +3862,7 @@ body[data-theme="dark"] .popular-heading h2{
   .blog-hero p{
     max-width:340px;
 
-    font-size:12px;
+    font-size:14px;
     line-height:1.7;
   }
 
@@ -3934,7 +3896,7 @@ body[data-theme="dark"] .popular-heading h2{
 
     width:calc(100% - 22px);
 
-    padding:65px 0 60px;
+    padding:105px 0 60px;
   }
 
   .blog-hero .blog-eyebrow{
@@ -3954,7 +3916,7 @@ body[data-theme="dark"] .popular-heading h2{
   .blog-hero p{
     max-width:310px;
 
-    font-size:11px;
+    font-size:14px;
     line-height:1.65;
   }
 
@@ -3982,7 +3944,7 @@ body[data-theme="dark"] .popular-heading h2{
   }
 
   .blog-hero-marker small{
-    font-size:4.5px;
+    font-size:7px;
   }
 
 }
@@ -4131,7 +4093,7 @@ body[data-theme="dark"] .blog-hero-overlay{
   margin:0 auto;
 
   color:var(--text);
-
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size:clamp(38px,4.8vw,58px);
 
   line-height:.98;
@@ -4293,7 +4255,7 @@ body[data-theme="dark"] .blog-hero-overlay{
 
   border-radius:20px;
 
-  font-size:8px;
+  font-size:9px;
   font-weight:800;
 
   letter-spacing:1.1px;
@@ -4338,7 +4300,7 @@ body[data-theme="dark"] .blog-hero-overlay{
 
   color:var(--muted);
 
-  font-size:8px;
+  font-size:9px;
   font-weight:800;
 
   letter-spacing:1px;
@@ -4353,7 +4315,7 @@ body[data-theme="dark"] .blog-hero-overlay{
 .blog-card-content h3{
   margin:18px 0 12px;
 
-  color:var(--text);
+  color:var(--primary);
 
   font-size:20px;
 
@@ -4474,7 +4436,7 @@ body[data-theme="dark"] .blog-hero-overlay{
 
   text-decoration:none;
 
-  font-size:10px;
+  font-size:11px;
 
   font-weight:800;
 
@@ -4696,7 +4658,7 @@ html[dir="rtl"] .blog-view-all:hover i{
   }
 
   .blog-section-eyebrow{
-    font-size:8px;
+    font-size:9px;
 
     letter-spacing:1.8px;
   }
@@ -4730,7 +4692,7 @@ html[dir="rtl"] .blog-view-all:hover i{
 
     padding:7px 10px;
 
-    font-size:7px;
+    font-size:9px;
   }
 
   .blog-card-content{
@@ -4740,7 +4702,7 @@ html[dir="rtl"] .blog-view-all:hover i{
   }
 
   .blog-card-meta{
-    font-size:7px;
+    font-size:8px;
 
     padding-bottom:12px;
   }
@@ -4752,7 +4714,7 @@ html[dir="rtl"] .blog-view-all:hover i{
   }
 
   .blog-card-content p{
-    font-size:11px;
+    font-size:13px;
 
     line-height:1.7;
   }
@@ -4772,7 +4734,7 @@ html[dir="rtl"] .blog-view-all:hover i{
 
     padding:0 21px;
 
-    font-size:9px;
+    font-size:10px;
   }
 
 }
@@ -4794,7 +4756,7 @@ html[dir="rtl"] .blog-view-all:hover i{
   }
 
   .blog-section-eyebrow{
-    font-size:7px;
+    font-size:9px;
 
     letter-spacing:1.4px;
   }
@@ -4829,7 +4791,7 @@ html[dir="rtl"] .blog-view-all:hover i{
   }
 
   .blog-card-content p{
-    font-size:10px;
+    font-size:12px;
   }
 
   .blog-card-category{
@@ -4838,7 +4800,7 @@ html[dir="rtl"] .blog-view-all:hover i{
 
     padding:6px 8px;
 
-    font-size:6px;
+    font-size:7px;
   }
 
   .latest-view-all{
@@ -4850,7 +4812,7 @@ html[dir="rtl"] .blog-view-all:hover i{
 
     padding:0 18px;
 
-    font-size:8px;
+    font-size:10px;
 
     gap:7px;
   }
@@ -4921,13 +4883,16 @@ html[dir="rtl"] .blog-view-all:hover i{
 
   text-align:center;
 }
+.indoor-heading h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .indoor-heading > p{
   max-width:580px;
   margin:22px auto 0;
 
   color:var(--muted);
-  font-size:13px;
+  font-size:15px;
   line-height:1.8;
 
   text-align:center;
@@ -4984,7 +4949,7 @@ html[dir="rtl"] .blog-view-all:hover i{
 
 .indoor-card h3{
   margin:35px 0 12px;
-  color:#111;
+  color:var(--primary);
   font-size:20px;
 }
 
@@ -5005,7 +4970,7 @@ body[data-theme="dark"] .indoor-card h3{
   gap:8px;
   color:var(--primary);
   text-decoration:none;
-  font-size:9px;
+  font-size:10px;
   font-weight:800;
   letter-spacing:.8px;
   text-transform:uppercase;
@@ -5058,26 +5023,28 @@ body[data-theme="dark"] .indoor-card h3{
 }
 
 .newsletter-inner .blog-section-eyebrow{
-  color:#8fe2d5;
+  color:var(--secondary);
+  font-size: 12px;
 }
 
 .newsletter-inner h2{
   margin:18px 0;
   color:#fff;
   font-size:52px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height:.98;
   letter-spacing:-2px;
 }
 
 .newsletter-inner h2 span{
-  color:#79d2c7;
+  color:var(--secondary);
 }
 
 .newsletter-inner > p{
   max-width:580px;
   margin:0 auto;
-  color:rgba(255,255,255,.72);
-  font-size:13px;
+  color:var(--border);
+  font-size:15px;
   line-height:1.8;
 }
 
@@ -5097,8 +5064,8 @@ body[data-theme="dark"] .indoor-card h3{
   padding:0 18px;
   border:0;
   outline:none;
-  color:#183329;
-  font-size:12px;
+  color:#0f201a;
+  font-size:14px;
   background:#fff;
 }
 
@@ -5106,8 +5073,8 @@ body[data-theme="dark"] .indoor-card h3{
   min-width:145px;
   border:0;
   color:#fff;
-  background:var(--secondary);
-  font-size:10px;
+  background:var(--primary);
+  font-size:11px;
   font-weight:800;
   letter-spacing:1px;
   text-transform:uppercase;
@@ -5116,12 +5083,12 @@ body[data-theme="dark"] .indoor-card h3{
 }
 
 .newsletter-form button:hover{
-  background:#111;
+  background:var(--secondary);
 }
 
 .newsletter-inner small{
-  color:rgba(255,255,255,.48);
-  font-size:9px;
+  color:var(--border);
+  font-size:14px;
 }
 
 
@@ -5379,7 +5346,7 @@ html[dir="rtl"] .indoor-card > span{
   }
 
   .blog-hero p{
-    font-size:13px;
+    font-size:14px;
   }
 
   .blog-hero-marker{
@@ -5512,7 +5479,7 @@ html[dir="rtl"] .indoor-card > span{
   }
 
   .blog-hero p{
-    font-size:12px;
+    font-size:14px;
   }
 
   .blog-section-heading h2,
@@ -5650,5 +5617,10 @@ html[dir="rtl"] .indoor-card > span{
   .newsletter-inner h2{
     font-size:30px;
   }
+  .newsletter-form input{
+    padding:15px 10px;
+    border-radius: 10px;
+  }
+ 
 
 }
