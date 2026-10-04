@@ -1,0 +1,1654 @@
+        /* =====================================================
+           GREENGROW SIGNUP PAGE
+        ====================================================== */
+
+        :root {
+
+            --primary: #55d35b;
+            --secondary: #2A9D8F;
+
+            --background: #F7FAF8;
+            --surface: #FFFFFF;
+
+            --text: #183329;
+            --muted: #68776F;
+
+            --border: #DCE7E1;
+
+            --transition: .3s ease;
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        body[data-theme="dark"] {
+
+            --primary: #55d35b;
+            --secondary: #4DB6AC;
+
+            --background: #385349;
+            --surface: #3c5e4d;
+
+            --text: #F1F7F3;
+            --muted: #B7C5BD;
+
+            --border: rgba(255,255,255,.13);
+        }
+
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        *,
+        *::before,
+        *::after {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+
+            width: 100%;
+            height: 100%;
+
+            min-height: 100%;
+        }
+
+
+        html {
+
+            overflow: hidden !important;
+        }
+
+
+        body {
+
+            overflow: hidden !important;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            font-family: "Nunito", sans-serif;
+
+            transition:
+                background .3s ease,
+                color .3s ease;
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        button,
+        input,
+        select {
+
+            font: inherit;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE
+        ====================================================== */
+
+        .gg-signup-page {
+
+            width: 100%;
+            height: 100dvh;
+
+            min-height: 100dvh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           BACKGROUND DECORATION
+        ====================================================== */
+
+        .gg-signup-bg {
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            overflow: hidden;
+        }
+
+
+        .gg-signup-bg::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 550px;
+            height: 550px;
+
+            top: -260px;
+            left: -180px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(85,211,91,.15),
+                    transparent 68%
+                );
+        }
+
+
+        .gg-signup-bg::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            right: -220px;
+            bottom: -250px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(42,157,143,.14),
+                    transparent 68%
+                );
+        }
+
+
+        /* =====================================================
+           TOP CONTROLS
+        ====================================================== */
+
+        .gg-signup-controls {
+
+            position: absolute;
+
+            top: 22px;
+            right: 25px;
+
+            z-index: 20;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        .gg-signup-control {
+
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 11px;
+
+            background: var(--surface);
+
+            color: var(--text);
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition:
+                background var(--transition),
+                color var(--transition),
+                border-color var(--transition),
+                transform var(--transition);
+        }
+
+
+        .gg-signup-control:hover {
+
+            background: var(--primary);
+
+            border-color: var(--primary);
+
+            color: #12351e;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           SIGNUP CARD
+        ====================================================== */
+
+        .gg-signup-card {
+
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+
+            max-width: 500px;
+
+            max-height: calc(100dvh - 50px);
+
+            padding: 28px 34px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            border-radius: 24px;
+
+            background: var(--surface);
+
+            box-shadow:
+                0 25px 70px
+                rgba(24,51,41,.10);
+
+            transition:
+                background .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+
+        body[data-theme="dark"]
+        .gg-signup-card {
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,.18);
+        }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .gg-signup-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 8px;
+        }
+
+
+        .gg-signup-logo img {
+
+            display: block;
+
+            width: 145px;
+
+            height: auto;
+
+            max-height: 55px;
+
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           HEADING
+        ====================================================== */
+
+        .gg-signup-heading {
+
+            text-align: center;
+
+            margin-bottom: 17px;
+        }
+
+
+        .gg-signup-eyebrow {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            margin-bottom: 7px;
+
+            color: var(--secondary);
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+
+        .gg-signup-eyebrow span {
+
+            width: 22px;
+            height: 2px;
+
+            background: var(--primary);
+        }
+
+
+        .gg-signup-heading h1 {
+
+            margin-bottom: 6px;
+
+            font-family:
+                "Trebuchet MS",
+                "Nunito",
+                sans-serif;
+
+            font-size: clamp(30px, 3vw, 40px);
+
+            line-height: 1.05;
+
+            letter-spacing: -1px;
+        }
+
+
+        .gg-signup-heading h1 span {
+
+            color: var(--primary);
+        }
+
+
+        .gg-signup-heading p {
+
+            max-width: 390px;
+
+            margin: 0 auto;
+
+            color: var(--muted);
+
+            font-size: 11px;
+
+            line-height: 1.55;
+        }
+
+
+        /* =====================================================
+           FORM
+        ====================================================== */
+
+        .gg-signup-form {
+
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           TWO INPUT ROW
+        ====================================================== */
+
+        .gg-signup-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 11px;
+        }
+
+
+        /* =====================================================
+           FIELD
+        ====================================================== */
+
+        .gg-signup-field {
+
+            margin-bottom: 10px;
+        }
+
+
+        .gg-signup-field label {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: var(--text);
+
+            font-size: 10px;
+
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           INPUT WRAPPER
+        ====================================================== */
+
+        .gg-signup-input-wrap {
+
+            position: relative;
+
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           INPUT ICON
+        ====================================================== */
+
+        .gg-signup-input-icon {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 13px;
+
+            transform: translateY(-50%);
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            pointer-events: none;
+
+            transition: color var(--transition);
+        }
+
+
+        .gg-signup-input-wrap:focus-within
+        .gg-signup-input-icon {
+
+            color: var(--primary);
+        }
+
+
+        /* =====================================================
+           INPUT
+        ====================================================== */
+
+        .gg-signup-input {
+
+            width: 100%;
+
+            height: 43px;
+
+            padding:
+                0 40px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 10px;
+
+            outline: none;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            font-size: 10px;
+
+            transition:
+                border-color var(--transition),
+                box-shadow var(--transition),
+                background var(--transition);
+        }
+
+
+        .gg-signup-input::placeholder {
+
+            color: var(--muted);
+
+            opacity: .75;
+        }
+
+
+        .gg-signup-input:focus {
+
+            border-color: var(--primary);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(85,211,91,.10);
+        }
+
+
+        /* =====================================================
+           PASSWORD TOGGLE
+        ====================================================== */
+
+        .gg-signup-password-toggle {
+
+            position: absolute;
+
+            top: 50%;
+
+            right: 8px;
+
+            width: 29px;
+            height: 29px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transform: translateY(-50%);
+
+            border: 0;
+
+            border-radius: 7px;
+
+            background: transparent;
+
+            color: var(--muted);
+
+            cursor: pointer;
+
+            transition:
+                color var(--transition),
+                background var(--transition);
+        }
+
+
+        .gg-signup-password-toggle:hover {
+
+            color: var(--primary);
+
+            background:
+                rgba(85,211,91,.10);
+        }
+
+
+        /* =====================================================
+           TERMS
+        ====================================================== */
+
+        .gg-signup-terms {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 7px;
+
+            margin:
+                2px
+                0
+                13px;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            line-height: 1.45;
+
+            cursor: pointer;
+        }
+
+
+        .gg-signup-terms input {
+
+            width: 13px;
+            height: 13px;
+
+            margin-top: 1px;
+
+            flex-shrink: 0;
+
+            accent-color: var(--primary);
+
+            cursor: pointer;
+        }
+
+
+        .gg-signup-terms a {
+
+            color: var(--secondary);
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           SIGNUP BUTTON
+        ====================================================== */
+
+        .gg-signup-submit {
+
+            width: 100%;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            border: 0;
+
+            border-radius: 10px;
+
+            background: var(--primary);
+
+            color: #12351e;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .gg-signup-submit:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(85,211,91,.18);
+        }
+
+
+        .gg-signup-submit:disabled {
+
+            opacity: .7;
+
+            cursor: wait;
+
+            transform: none;
+
+            box-shadow: none;
+        }
+
+
+        /* =====================================================
+           DIVIDER
+        ====================================================== */
+
+        .gg-signup-divider {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin: 13px 0;
+
+            color: var(--muted);
+
+            font-size: 8px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.4px;
+        }
+
+
+        .gg-signup-divider::before,
+        .gg-signup-divider::after {
+
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: var(--border);
+        }
+
+
+        /* =====================================================
+           LOGIN LINK
+        ====================================================== */
+
+        .gg-signup-login {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 5px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+        }
+
+
+        .gg-signup-login a {
+
+            color: var(--secondary);
+
+            font-weight: 900;
+
+            transition: color var(--transition);
+        }
+
+
+        .gg-signup-login a:hover {
+
+            color: var(--primary);
+        }
+
+
+        /* =====================================================
+           SECURITY
+        ====================================================== */
+
+        .gg-signup-security {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 6px;
+
+            margin-top: 11px;
+
+            color: var(--muted);
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            text-align: center;
+        }
+
+
+        .gg-signup-security i {
+
+            color: var(--primary);
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           RTL
+        ====================================================== */
+
+        html[dir="rtl"] .gg-signup-controls {
+
+            right: auto;
+
+            left: 25px;
+        }
+
+
+        html[dir="rtl"] .gg-signup-input-icon {
+
+            left: auto;
+
+            right: 13px;
+        }
+
+
+        html[dir="rtl"] .gg-signup-input {
+
+            padding-left: 40px;
+
+            padding-right: 40px;
+        }
+
+
+        html[dir="rtl"] .gg-signup-password-toggle {
+
+            right: auto;
+
+            left: 8px;
+        }
+
+
+        html[dir="rtl"] .gg-signup-submit i {
+
+            transform: rotate(180deg);
+        }
+
+
+        /* =====================================================
+           LARGE SCREEN — 1400+
+        ====================================================== */
+
+        @media (min-width: 1400px) {
+
+            .gg-signup-card {
+
+                max-width: 520px;
+
+                padding:
+                    30px 38px;
+            }
+
+
+            .gg-signup-logo img {
+
+                width: 155px;
+            }
+
+
+            .gg-signup-input {
+
+                height: 45px;
+            }
+
+
+            .gg-signup-submit {
+
+                height: 46px;
+            }
+        }
+
+
+        /* =====================================================
+           DESKTOP — 1200 TO 1399
+        ====================================================== */
+
+        @media (min-width: 1200px)
+        and (max-width: 1399px) {
+
+            .gg-signup-card {
+
+                max-width: 500px;
+
+                padding:
+                    27px 34px;
+            }
+        }
+
+
+        /* =====================================================
+           MEDIUM — 1025 TO 1199
+        ====================================================== */
+
+        @media (min-width: 1025px)
+        and (max-width: 1199px) {
+
+            .gg-signup-card {
+
+                max-width: 480px;
+
+                padding:
+                    25px 30px;
+            }
+
+
+            .gg-signup-controls {
+
+                top: 18px;
+
+                right: 20px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-controls {
+
+                right: auto;
+
+                left: 20px;
+            }
+        }
+
+
+        /* =====================================================
+           TABLET — 769 TO 1024
+        ====================================================== */
+
+        @media (min-width: 769px)
+        and (max-width: 1024px) {
+
+            .gg-signup-page {
+
+                padding: 20px;
+            }
+
+
+            .gg-signup-card {
+
+                width: min(100%, 480px);
+
+                max-height:
+                    calc(100dvh - 40px);
+
+                padding:
+                    23px 28px;
+
+                border-radius: 20px;
+            }
+
+
+            .gg-signup-logo img {
+
+                width: 135px;
+
+                max-height: 48px;
+            }
+
+
+            .gg-signup-heading {
+
+                margin-bottom: 13px;
+            }
+
+
+            .gg-signup-heading h1 {
+
+                font-size: 32px;
+            }
+
+
+            .gg-signup-heading p {
+
+                font-size: 10px;
+            }
+
+
+            .gg-signup-field {
+
+                margin-bottom: 8px;
+            }
+
+
+            .gg-signup-input {
+
+                height: 40px;
+            }
+
+
+            .gg-signup-submit {
+
+                height: 41px;
+            }
+
+
+            .gg-signup-controls {
+
+                top: 15px;
+
+                right: 15px;
+
+                gap: 6px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-controls {
+
+                right: auto;
+
+                left: 15px;
+            }
+
+
+            .gg-signup-control {
+
+                width: 36px;
+                height: 36px;
+
+                font-size: 14px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE — 601 TO 768
+        ====================================================== */
+
+        @media (min-width: 601px)
+        and (max-width: 768px) {
+
+            .gg-signup-page {
+
+                padding: 15px;
+            }
+
+
+            .gg-signup-card {
+
+                max-width: 450px;
+
+                padding:
+                    21px 25px;
+
+                border-radius: 18px;
+            }
+
+
+            .gg-signup-logo img {
+
+                width: 125px;
+
+                max-height: 45px;
+            }
+
+
+            .gg-signup-heading {
+
+                margin-bottom: 12px;
+            }
+
+
+            .gg-signup-heading h1 {
+
+                font-size: 30px;
+            }
+
+
+            .gg-signup-heading p {
+
+                font-size: 9px;
+            }
+
+
+            .gg-signup-input {
+
+                height: 39px;
+            }
+
+
+            .gg-signup-submit {
+
+                height: 40px;
+            }
+
+
+            .gg-signup-controls {
+
+                top: 10px;
+
+                right: 10px;
+
+                gap: 5px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-controls {
+
+                right: auto;
+
+                left: 10px;
+            }
+
+
+            .gg-signup-control {
+
+                width: 34px;
+                height: 34px;
+
+                border-radius: 9px;
+
+                font-size: 13px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE — 481 TO 600
+        ====================================================== */
+
+        @media (min-width: 481px)
+        and (max-width: 600px) {
+
+            .gg-signup-page {
+
+                padding: 12px;
+            }
+
+
+            .gg-signup-card {
+
+                max-width: 430px;
+
+                padding:
+                    19px 21px;
+
+                border-radius: 17px;
+            }
+
+
+            .gg-signup-logo img {
+
+                width: 115px;
+
+                max-height: 42px;
+            }
+
+
+            .gg-signup-heading {
+
+                margin-bottom: 10px;
+            }
+
+
+            .gg-signup-heading h1 {
+
+                font-size: 27px;
+            }
+
+
+            .gg-signup-heading p {
+
+                font-size: 8px;
+            }
+
+
+            .gg-signup-row {
+
+                gap: 8px;
+            }
+
+
+            .gg-signup-field {
+
+                margin-bottom: 7px;
+            }
+
+
+            .gg-signup-field label {
+
+                font-size: 9px;
+            }
+
+
+            .gg-signup-input {
+
+                height: 37px;
+
+                font-size: 9px;
+            }
+
+
+            .gg-signup-submit {
+
+                height: 38px;
+
+                font-size: 10px;
+            }
+
+
+            .gg-signup-terms {
+
+                margin-bottom: 10px;
+
+                font-size: 8px;
+            }
+
+
+            .gg-signup-divider {
+
+                margin: 10px 0;
+            }
+
+
+            .gg-signup-security {
+
+                margin-top: 8px;
+            }
+
+
+            .gg-signup-controls {
+
+                top: 8px;
+
+                right: 8px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-controls {
+
+                right: auto;
+
+                left: 8px;
+            }
+
+
+            .gg-signup-control {
+
+                width: 31px;
+                height: 31px;
+
+                border-radius: 8px;
+
+                font-size: 11px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE — 360 TO 480
+        ====================================================== */
+
+        @media (min-width: 360px)
+        and (max-width: 480px) {
+
+            .gg-signup-page {
+
+                padding: 10px;
+            }
+
+
+            .gg-signup-card {
+
+                max-width: 100%;
+
+                max-height:
+                    calc(100dvh - 20px);
+
+                padding:
+                    17px 18px;
+
+                border-radius: 16px;
+            }
+
+
+            .gg-signup-logo {
+
+                margin-bottom: 4px;
+            }
+
+
+            .gg-signup-logo img {
+
+                width: 105px;
+
+                max-height: 38px;
+            }
+
+
+            .gg-signup-eyebrow {
+
+                margin-bottom: 5px;
+
+                font-size: 7px;
+
+                letter-spacing: 1.5px;
+            }
+
+
+            .gg-signup-heading {
+
+                margin-bottom: 9px;
+            }
+
+
+            .gg-signup-heading h1 {
+
+                font-size: 25px;
+
+                margin-bottom: 4px;
+            }
+
+
+            .gg-signup-heading p {
+
+                font-size: 8px;
+
+                line-height: 1.4;
+            }
+
+
+            .gg-signup-row {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 7px;
+            }
+
+
+            .gg-signup-field {
+
+                margin-bottom: 6px;
+            }
+
+
+            .gg-signup-field label {
+
+                margin-bottom: 3px;
+
+                font-size: 8px;
+            }
+
+
+            .gg-signup-input {
+
+                height: 35px;
+
+                padding-left: 34px;
+
+                padding-right: 34px;
+
+                border-radius: 8px;
+
+                font-size: 8px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-input {
+
+                padding-left: 34px;
+
+                padding-right: 34px;
+            }
+
+
+            .gg-signup-input-icon {
+
+                left: 10px;
+
+                font-size: 11px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-input-icon {
+
+                left: auto;
+
+                right: 10px;
+            }
+
+
+            .gg-signup-password-toggle {
+
+                right: 5px;
+
+                width: 25px;
+
+                height: 25px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-password-toggle {
+
+                right: auto;
+
+                left: 5px;
+            }
+
+
+            .gg-signup-terms {
+
+                margin:
+                    2px
+                    0
+                    9px;
+
+                font-size: 7px;
+            }
+
+
+            .gg-signup-terms input {
+
+                width: 11px;
+
+                height: 11px;
+            }
+
+
+            .gg-signup-submit {
+
+                height: 36px;
+
+                border-radius: 8px;
+
+                font-size: 9px;
+            }
+
+
+            .gg-signup-divider {
+
+                margin: 8px 0;
+
+                font-size: 7px;
+            }
+
+
+            .gg-signup-login {
+
+                font-size: 8px;
+            }
+
+
+            .gg-signup-security {
+
+                margin-top: 6px;
+
+                font-size: 7px;
+            }
+
+
+            .gg-signup-controls {
+
+                top: 7px;
+
+                right: 7px;
+
+                gap: 4px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-controls {
+
+                right: auto;
+
+                left: 7px;
+            }
+
+
+            .gg-signup-control {
+
+                width: 29px;
+
+                height: 29px;
+
+                border-radius: 7px;
+
+                font-size: 10px;
+            }
+        }
+
+
+        /* =====================================================
+           EXTRA SMALL — BELOW 360
+        ====================================================== */
+
+        @media (max-width: 359px) {
+
+            .gg-signup-page {
+
+                padding: 7px;
+            }
+
+
+            .gg-signup-card {
+
+                max-height:
+                    calc(100dvh - 14px);
+
+                padding:
+                    13px 14px;
+
+                border-radius: 13px;
+            }
+
+
+            .gg-signup-logo img {
+
+                width: 90px;
+
+                max-height: 32px;
+            }
+
+
+            .gg-signup-heading {
+
+                margin-bottom: 7px;
+            }
+
+
+            .gg-signup-heading h1 {
+
+                font-size: 22px;
+            }
+
+
+            .gg-signup-heading p {
+
+                display: none;
+            }
+
+
+            .gg-signup-row {
+
+                gap: 5px;
+            }
+
+
+            .gg-signup-field {
+
+                margin-bottom: 5px;
+            }
+
+
+            .gg-signup-field label {
+
+                font-size: 7px;
+            }
+
+
+            .gg-signup-input {
+
+                height: 32px;
+
+                font-size: 7px;
+
+                border-radius: 7px;
+            }
+
+
+            .gg-signup-submit {
+
+                height: 33px;
+
+                font-size: 8px;
+            }
+
+
+            .gg-signup-terms {
+
+                font-size: 6px;
+
+                margin-bottom: 7px;
+            }
+
+
+            .gg-signup-divider {
+
+                margin: 7px 0;
+            }
+
+
+            .gg-signup-login {
+
+                font-size: 7px;
+            }
+
+
+            .gg-signup-security {
+
+                display: none;
+            }
+
+
+            .gg-signup-controls {
+
+                top: 5px;
+
+                right: 5px;
+            }
+
+
+            html[dir="rtl"] .gg-signup-controls {
+
+                right: auto;
+
+                left: 5px;
+            }
+
+
+            .gg-signup-control {
+
+                width: 27px;
+
+                height: 27px;
+
+                font-size: 9px;
+            }
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation: none !important;
+
+                transition: none !important;
+            }
+        }

@@ -1,600 +1,324 @@
+  const passwordInput =
+            document.getElementById("ggLoginPassword");
 
+        const passwordToggle =
+            document.getElementById("ggPasswordToggle");
 
-const body = document.body;
+        const passwordIcon =
+            document.getElementById("ggPasswordIcon");
 
-const rtlToggle = document.getElementById("rtlToggle");
 
-const themeToggle = document.getElementById("themeToggle");
+        if (passwordToggle) {
 
-const themeIcon = document.getElementById("themeIcon");
+            passwordToggle.addEventListener(
+                "click",
+                function () {
 
-const menuToggle = document.getElementById("menuToggle");
 
-const menuIcon = document.getElementById("menuIcon");
+                    if (
+                        passwordInput.type === "password"
+                    ) {
 
-const navMenu = document.getElementById("navMenu");
 
-const navDropdown = document.querySelector(".nav-dropdown");
+                        passwordInput.type = "text";
 
-const dropdownToggle =
-    document.querySelector(".nav-dropdown-toggle");
 
+                        passwordIcon.className =
+                            "bi bi-eye-slash";
 
 
+                        passwordToggle.setAttribute(
+                            "aria-label",
+                            "Hide password"
+                        );
 
 
+                        passwordToggle.setAttribute(
+                            "title",
+                            "Hide password"
+                        );
 
 
+                    } else {
 
-const savedTheme =
-    localStorage.getItem("greengrow-theme");
 
+                        passwordInput.type =
+                            "password";
 
-if (savedTheme === "dark") {
 
-    body.setAttribute("data-theme", "dark");
+                        passwordIcon.className =
+                            "bi bi-eye";
 
-    themeIcon.className =
-        "bi bi-sun-fill";
 
-} else {
+                        passwordToggle.setAttribute(
+                            "aria-label",
+                            "Show password"
+                        );
 
-    body.removeAttribute("data-theme");
 
-    themeIcon.className =
-        "bi bi-moon-stars-fill";
-}
+                        passwordToggle.setAttribute(
+                            "title",
+                            "Show password"
+                        );
 
+                    }
 
-
-
-
-
-
-themeToggle.addEventListener("click", function () {
-
-    const darkMode =
-        body.getAttribute("data-theme") === "dark";
-
-
-    if (darkMode) {
-
-        body.removeAttribute("data-theme");
-
-        localStorage.setItem(
-            "greengrow-theme",
-            "light"
-        );
-
-        themeIcon.className =
-            "bi bi-moon-stars-fill";
-
-    } else {
-
-        body.setAttribute(
-            "data-theme",
-            "dark"
-        );
-
-        localStorage.setItem(
-            "greengrow-theme",
-            "dark"
-        );
-
-        themeIcon.className =
-            "bi bi-sun-fill";
-    }
-
-});
-
-
-
-
-
-
-
-rtlToggle.addEventListener("click", function () {
-
-    const currentDirection =
-        document.documentElement.getAttribute("dir");
-
-
-    if (currentDirection === "rtl") {
-
-        document.documentElement.setAttribute(
-            "dir",
-            "ltr"
-        );
-
-        localStorage.setItem(
-            "greengrow-direction",
-            "ltr"
-        );
-
-    } else {
-
-        document.documentElement.setAttribute(
-            "dir",
-            "rtl"
-        );
-
-        localStorage.setItem(
-            "greengrow-direction",
-            "rtl"
-        );
-    }
-
-});
-
-
-
-
-
-
-const savedDirection =
-    localStorage.getItem("greengrow-direction");
-
-
-if (savedDirection) {
-
-    document.documentElement.setAttribute(
-        "dir",
-        savedDirection
-    );
-
-}
-
-
-
-
-
-
-
-menuToggle.addEventListener("click", function () {
-
-    const isOpen =
-        navMenu.classList.toggle("active");
-
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-
-
-    if (isOpen) {
-
-        menuIcon.className =
-            "bi bi-x-lg";
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Close menu"
-        );
-
-    } else {
-
-        menuIcon.className =
-            "bi bi-list";
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open menu"
-        );
-
-        navDropdown.classList.remove("open");
-    }
-
-});
-
-
-
-
-
-
-dropdownToggle.addEventListener("click", function (event) {
-
-    event.preventDefault();
-
-    if (window.innerWidth <= 768) {
-
-        navDropdown.classList.toggle("open");
-
-    }
-
-});
-
-
-
-
-const navLinks =
-    document.querySelectorAll(
-        ".nav-link, .dropdown-link, .mobile-login"
-    );
-
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        if (window.innerWidth <= 768) {
-
-            navMenu.classList.remove("active");
-
-            navDropdown.classList.remove("open");
-
-            menuIcon.className =
-                "bi bi-list";
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open menu"
-            );
-        }
-
-    });
-
-});
-
-
-
-
-
-
-
-window.addEventListener("resize", function () {
-
-    if (window.innerWidth > 768) {
-
-        navMenu.classList.remove("active");
-
-        navDropdown.classList.remove("open");
-
-        menuIcon.className =
-            "bi bi-list";
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-    }
-
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const navLinks =
-        document.querySelectorAll(".nav-link");
-
-    const dropdownLinks =
-        document.querySelectorAll(".dropdown-link");
-
-    const homeButton =
-        document.querySelector(".nav-dropdown-toggle");
-
-
-
-    let currentPage =
-        window.location.pathname
-            .split("/")
-            .pop()
-            .toLowerCase();
-
-
-    /*
-       If URL is:
-
-       https://example.com/
-
-       treat it as index.html
-    */
-
-    if (
-        currentPage === "" ||
-        currentPage === "/"
-    ) {
-        currentPage = "index.html";
-    }
-
-
-    navLinks.forEach(function (link) {
-
-        link.classList.remove("active");
-
-        link.removeAttribute("aria-current");
-
-    });
-
-
-    dropdownLinks.forEach(function (link) {
-
-        link.classList.remove("active");
-
-        link.removeAttribute("aria-current");
-
-    });
-
-
-    if (homeButton) {
-
-        homeButton.classList.remove("active");
-
-        homeButton.removeAttribute("aria-current");
-
-    }
-
-
-    navLinks.forEach(function (link) {
-
-        let href =
-            link.getAttribute("href");
-
-        if (!href) return;
-
-
-        /*
-           Remove query and hash
-        */
-
-        href =
-            href
-                .split("?")[0]
-                .split("#")[0];
-
-
-        /*
-           Get only filename
-        */
-
-        let linkPage =
-            href
-                .split("/")
-                .pop()
-                .toLowerCase();
-
-
-        if (linkPage === currentPage) {
-
-            link.classList.add("active");
-
-            link.setAttribute(
-                "aria-current",
-                "page"
+                }
             );
 
         }
 
-    });
 
 
+        /* =====================================================
+           LOGIN FORM
+        ====================================================== */
 
-    let homePageSelected = false;
+        const loginForm =
+            document.getElementById("ggLoginForm");
 
+        const loginButton =
+            document.getElementById("ggLoginSubmit");
 
-    dropdownLinks.forEach(function (link) {
-
-        let href =
-            link.getAttribute("href");
-
-        if (!href) return;
-
-
-        href =
-            href
-                .split("?")[0]
-                .split("#")[0];
+        const loginButtonText =
+            document.getElementById("ggLoginButtonText");
 
 
-        let linkPage =
-            href
-                .split("/")
-                .pop()
-                .toLowerCase();
+        if (loginForm) {
+
+            loginForm.addEventListener(
+                "submit",
+                function (event) {
 
 
+                    event.preventDefault();
 
-        if (linkPage === currentPage) {
 
-            link.classList.add("active");
+                    loginButton.disabled = true;
 
-            link.setAttribute(
-                "aria-current",
-                "page"
+
+                    loginButtonText.textContent =
+                        "Signing In...";
+
+
+                    setTimeout(
+                        function () {
+
+
+                            loginButton.disabled =
+                                false;
+
+
+                            loginButtonText.textContent =
+                                "Sign In";
+
+
+                        },
+                        1200
+                    );
+
+                }
             );
-
-            homePageSelected = true;
 
         }
 
-    });
 
 
-    if (
-        homePageSelected &&
-        homeButton
-    ) {
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
 
-        homeButton.classList.add("active");
+        const themeToggle =
+            document.getElementById("themeToggle");
 
-        homeButton.setAttribute(
-            "aria-current",
-            "page"
-        );
-
-    }
-
-});
+        const themeIcon =
+            document.getElementById("themeIcon");
 
 
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-
-    const themeToggle =
-        document.getElementById("themeToggle");
-
-    const themeIcon =
-        document.getElementById("themeIcon");
-
-    const savedTheme =
-        localStorage.getItem("greengrow-theme");
-
-    if (savedTheme === "dark") {
-
-        document.documentElement.setAttribute(
-            "data-theme",
-            "dark"
-        );
-
-        themeIcon.className =
-            "bi bi-sun-fill";
-    }
-
-
-    themeToggle?.addEventListener("click", () => {
-
-        const isDark =
-            document.documentElement.getAttribute(
-                "data-theme"
-            ) === "dark";
-
-        if (isDark) {
-
-            document.documentElement.removeAttribute(
-                "data-theme"
+        const savedTheme =
+            localStorage.getItem(
+                "greengrow-theme"
             );
 
-            localStorage.setItem(
-                "greengrow-theme",
-                "light"
+
+        function applyTheme(theme) {
+
+
+            document.body.setAttribute(
+                "data-theme",
+                theme
             );
 
-            themeIcon.className =
-                "bi bi-moon-stars-fill";
+
+            if (theme === "dark") {
+
+
+                themeIcon.className =
+                    "bi bi-sun-fill";
+
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    "Switch to light mode"
+                );
+
+
+                themeToggle.setAttribute(
+                    "title",
+                    "Light mode"
+                );
+
+
+            } else {
+
+
+                themeIcon.className =
+                    "bi bi-moon-stars-fill";
+
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    "Switch to dark mode"
+                );
+
+
+                themeToggle.setAttribute(
+                    "title",
+                    "Dark mode"
+                );
+
+            }
+
+        }
+
+
+        /* LOAD SAVED THEME */
+
+        if (savedTheme === "dark") {
+
+            applyTheme("dark");
 
         } else {
 
-            document.documentElement.setAttribute(
-                "data-theme",
-                "dark"
-            );
+            applyTheme("light");
 
-            localStorage.setItem(
-                "greengrow-theme",
-                "dark"
-            );
-
-            themeIcon.className =
-                "bi bi-sun-fill";
         }
 
-    });
+
+        /* TOGGLE THEME */
+
+        themeToggle.addEventListener(
+            "click",
+            function () {
 
 
-   
+                const currentTheme =
+                    document.body.getAttribute(
+                        "data-theme"
+                    );
 
 
+                const newTheme =
+                    currentTheme === "dark"
+                        ? "light"
+                        : "dark";
 
 
+                applyTheme(newTheme);
 
 
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(link => {
-
-        link.addEventListener("click", event => {
-
-            const targetId =
-                link.getAttribute("href");
-
-            if (!targetId || targetId === "#") {
-                return;
-            }
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) {
-                return;
-            }
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    });
-
-
-    const hero =
-        document.querySelector(".grow-hero");
-
-    const heroImage =
-        document.querySelector(
-            ".grow-hero-background"
-        );
-
-    const reduceMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
-
-    if (
-        hero &&
-        heroImage &&
-        !reduceMotion
-    ) {
-
-        hero.addEventListener(
-            "mousemove",
-            event => {
-
-                const rect =
-                    hero.getBoundingClientRect();
-
-                const x =
-                    (event.clientX - rect.left) /
-                    rect.width - .5;
-
-                const y =
-                    (event.clientY - rect.top) /
-                    rect.height - .5;
-
-                heroImage.style.transform =
-                    `scale(1.05)
-                     translate(${x * 8}px, ${y * 5}px)`;
+                localStorage.setItem(
+                    "greengrow-theme",
+                    newTheme
+                );
 
             }
         );
 
-        hero.addEventListener(
-            "mouseleave",
-            () => {
 
-                heroImage.style.transform =
-                    "scale(1.04)";
+
+        /* =====================================================
+           RTL / LTR
+        ====================================================== */
+
+        const rtlToggle =
+            document.getElementById("rtlToggle");
+
+
+        const savedDirection =
+            localStorage.getItem(
+                "greengrow-direction"
+            );
+
+
+        /* LOAD SAVED DIRECTION */
+
+        if (savedDirection === "rtl") {
+
+
+            document.documentElement.setAttribute(
+                "dir",
+                "rtl"
+            );
+
+
+        } else {
+
+
+            document.documentElement.setAttribute(
+                "dir",
+                "ltr"
+            );
+
+        }
+
+
+        /* TOGGLE RTL */
+
+        rtlToggle.addEventListener(
+            "click",
+            function () {
+
+
+                const currentDirection =
+                    document.documentElement
+                    .getAttribute("dir");
+
+
+                if (
+                    currentDirection === "rtl"
+                ) {
+
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "ltr"
+                        );
+
+
+                    localStorage.setItem(
+                        "greengrow-direction",
+                        "ltr"
+                    );
+
+
+                } else {
+
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "rtl"
+                        );
+
+
+                    localStorage.setItem(
+                        "greengrow-direction",
+                        "rtl"
+                    );
+
+                }
 
             }
         );
-    }
-
-});

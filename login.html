@@ -5,664 +5,468 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GreenGrow | Hydroponic & Vertical Farming Supplies</title>
+    <title>GreenGrow | Login</title>
 
-  
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+<link rel="stylesheet" href="login.css">
+   
+
+   
+
+
 </head>
 
-<body>
 
-    <header class="main-header">
-
-        <div class="header-container">
-
-            
-            <a href="index.html" class="brand-logo">
-                <img src="images/logo-1.png"
-                    alt="GreenGrow Hydroponic and Vertical Farming Supplies">
-            </a>
+<body data-theme="light">
 
 
-         
-            <nav class="nav-menu" id="navMenu">
 
-                
-                <div class="nav-dropdown">
+    <main class="gg-login-page">
 
-                    <button class="nav-dropdown-toggle" type="button">
 
-                        <span>Home</span>
 
-                        <i class="bi bi-chevron-down"></i>
+        <section class="gg-login-visual">
 
-                    </button>
 
-                    <div class="dropdown-menu">
+            <img
+                class="gg-login-visual-image"
+                src="images/image-16.webp"
+                alt="Hydroponic and vertical farming system"
+            >
 
-                        <a href="index.html" class="dropdown-link active">
-                            Home 1
-                        </a>
 
-                        <a href="home-2.html" class="dropdown-link">
-                            Home 2
-                        </a>
+            <div class="gg-login-visual-content">
+
+
+                <!-- LOGO -->
+
+                <a
+                    href="index.html"
+                    class="gg-login-logo"
+                    aria-label="GreenGrow Home"
+                >
+
+                    <!--
+                        IMPORTANT:
+                        Keep logo-1.png in the same folder
+                        as this HTML file.
+                    -->
+
+                    <img
+                        src="images/logo-1.png"
+                        alt="GreenGrow"
+                    >
+
+                </a>
+
+
+                <!-- MAIN CONTENT -->
+
+                <div class="gg-login-visual-main">
+
+
+                    <div class="gg-login-eyebrow">
+
+                        <span></span>
+
+                        HYDROPONIC & VERTICAL FARMING
+
+                    </div>
+
+
+                    <h1>
+
+                        Grow Smarter.<br>
+
+                        <span>Build Better.</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Access your GreenGrow account and manage
+                        your hydroponic systems, growing supplies,
+                        farming solutions and modern growing projects.
+
+                    </p>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="gg-login-features">
+
+
+                        <div class="gg-login-feature">
+
+                            <i class="bi bi-droplet-fill"></i>
+
+                            Hydroponic Systems
+
+                        </div>
+
+
+                        <div class="gg-login-feature">
+
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+
+                            Vertical Farming
+
+                        </div>
+
+
+                        <div class="gg-login-feature">
+
+                            <i class="bi bi-lightbulb-fill"></i>
+
+                            Grow Technology
+
+                        </div>
+
 
                     </div>
 
                 </div>
 
 
-                <a href="about.html" class="nav-link">
-                    About
-                </a>
+                <!-- BOTTOM -->
+
+                <div class="gg-login-visual-bottom">
+
+
+                    <span>
+
+                        <i class="bi bi-leaf-fill"></i>
+
+                        Smart Growing
+
+                    </span>
+
+
+                    <span>
+
+                        <i class="bi bi-shield-check"></i>
+
+                        Secure Access
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
 
 
 
 
-                
-                <a href="farming.html" class="nav-link">
-                     Farming
-                </a>
+        <section class="gg-login-panel">
 
 
-               
-                <a href="products.html" class="nav-link">
-                    Products
-                </a>
+
+            <div class="gg-login-controls">
 
 
-                
-                <a href="solutions.html" class="nav-link">
-                    Solutions
-                </a>
+                <!-- RTL BUTTON -->
 
-
-               
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
-
-
-                
-                <a href="login.html" class="mobile-login">
-                    Grow With Us
-                </a>
-
-            </nav>
-
-
-           
-            <div class="header-actions">
-
-               
-
-
-                
-                <button class="header-icon"
-                    id="rtlToggle"
+                <button
                     type="button"
-                    aria-label="Toggle RTL"
-                    title="Toggle RTL">
+                    class="gg-login-control"
+                    id="rtlToggle"
+                    aria-label="Switch RTL"
+                    title="RTL / LTR"
+                >
 
                     <i class="bi bi-arrow-left-right"></i>
 
                 </button>
 
 
-                
-                <button class="header-icon"
+                <!-- DARK MODE BUTTON -->
+
+                <button
+                    type="button"
+                    class="gg-login-control"
                     id="themeToggle"
-                    type="button"
-                    aria-label="Toggle dark mode"
-                    title="Toggle dark mode">
+                    aria-label="Dark mode"
+                    title="Dark mode"
+                >
 
-                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
-
-                </button>
-                
-                <a href="login.html" class="login-button">
-                   Grow With Us
-                </a>
-
-
-                
-                <button class="menu-toggle"
-                    id="menuToggle"
-                    type="button"
-                    aria-label="Open menu"
-                    aria-expanded="false">
-
-                    <i class="bi bi-list" id="menuIcon"></i>
+                    <i
+                        class="bi bi-moon-stars-fill"
+                        id="themeIcon"
+                    ></i>
 
                 </button>
+
 
             </div>
 
-        </div>
 
-    </header>
+            <!-- LOGIN BOX -->
 
-
-
+            <div class="gg-login-box">
 
 
+                <!-- LABEL -->
 
+                <div class="gg-login-label">
 
-
-
-    <section class="grow-hero">
-
-        <div class="grow-hero-background"></div>
-
-        <div class="grow-hero-overlay"></div>
-
-        <div class="grow-hero-container">
-
-            <div class="grow-hero-content">
-
-                <span class="grow-eyebrow">
-                    <i class="bi bi-leaf"></i>
-                    GREENGROW FARMING COMMUNITY
-                </span>
-
-                <h1>
-                    Grow With Us.
-                    <span>Grow Smarter.</span>
-                </h1>
-
-                <p>
-                    Build better hydroponic and vertical farming systems
-                    with reliable products, practical guidance and
-                    modern growing solutions from GreenGrow.
-                </p>
-
-                <div class="grow-hero-buttons">
-
-                    <a href="solutions.html"
-                        class="grow-btn grow-btn-primary">
-
-                        Explore Solutions
-
-                        <i class="bi bi-arrow-up-right"></i>
-
-                    </a>
-
-                    <a href="contact.html"
-                        class="grow-btn grow-btn-secondary">
-
-                        Talk To Our Team
-
-                        <i class="bi bi-chat"></i>
-
-                    </a>
+                    WELCOME BACK
 
                 </div>
 
-            </div>
 
-            <div class="grow-hero-number">
-                <span>01</span>
-                <small>GROW WITH US</small>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-
-
-    <section class="grow-intro">
-
-        <div class="grow-container">
-
-            <div class="grow-intro-heading">
-
-                <span class="section-eyebrow">
-                   OUR APPROACH
-                </span>
+                <!-- TITLE -->
 
                 <h2>
-                    Everything You Need
-                    <span>To Grow Better.</span>
+
+                    Sign In To<br>
+
+                    <span>GreenGrow.</span>
+
                 </h2>
 
-            </div>
 
-            <div class="grow-intro-content">
+                <!-- DESCRIPTION -->
 
-                <p>
-                    GreenGrow brings together hydroponic systems,
-                    vertical farming equipment, nutrients, growing media,
-                    irrigation products and indoor growing supplies
-                    for modern growers.
+                <p class="gg-login-description">
+
+                    Sign in to continue managing your growing
+                    solutions and explore everything GreenGrow
+                    has to offer.
+
                 </p>
 
-                <p>
-                    Whether you are starting your first growing system
-                    or developing a larger commercial setup, our goal
-                    is to make modern farming practical and easier
-                    to build.
-                </p>
+
+                <form id="ggLoginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="gg-login-field">
+
+
+                        <label for="ggLoginEmail">
+
+                            Email Address
+
+                        </label>
+
+
+                        <div class="gg-login-input-wrap">
+
+
+                            <i
+                                class="bi bi-envelope gg-login-input-icon">
+                            </i>
+
+
+                            <input
+                                type="email"
+                                id="ggLoginEmail"
+                                class="gg-login-input"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="gg-login-field">
+
+
+                        <label for="ggLoginPassword">
+
+                            Password
+
+                        </label>
+
+
+                        <div class="gg-login-input-wrap">
+
+
+                            <i
+                                class="bi bi-lock gg-login-input-icon">
+                            </i>
+
+
+                            <input
+                                type="password"
+                                id="ggLoginPassword"
+                                class="gg-login-input"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <!-- SHOW PASSWORD -->
+
+                            <button
+                                type="button"
+                                class="gg-password-toggle"
+                                id="ggPasswordToggle"
+                                aria-label="Show password"
+                                title="Show password"
+                            >
+
+                                <i
+                                    class="bi bi-eye"
+                                    id="ggPasswordIcon">
+                                </i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="gg-login-options">
+
+
+                        <label class="gg-login-remember">
+
+
+                            <input
+                                type="checkbox"
+                                id="ggRemember"
+                            >
+
+
+                            <span>
+                                Remember me
+                            </span>
+
+
+                        </label>
+
+
+                        <a
+                            href="forgot-password.html"
+                            class="gg-login-forgot"
+                        >
+
+                            Forgot Password?
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="gg-login-submit"
+                        id="ggLoginSubmit"
+                    >
+
+                        <span id="ggLoginButtonText">
+
+                            Sign In
+
+                        </span>
+
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- DIVIDER -->
+
+                    <div class="gg-login-divider">
+
+                        NEW TO GREENGROW?
+
+                    </div>
+
+
+                    <!-- REGISTER -->
+
+                    <div class="gg-login-register">
+
+
+                        <span>
+
+                            Don't have an account?
+
+                        </span>
+
+
+                        <a href="signup.html">
+
+                            Create Account
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- SECURITY -->
+
+                    <div class="gg-login-security">
+
+
+                        <i class="bi bi-shield-lock-fill"></i>
+
+
+                        <span>
+
+                            Your account information is protected.
+
+                        </span>
+
+
+                    </div>
+
+
+                </form>
+
 
             </div>
 
-        </div>
 
-    </section>
+        </section>
 
 
+    </main>
 
 
 
+    <script src="login.js">   </script>
 
-
-
-
-
-
-
-
-
-
-    <section class="grow-audience">
-
-        <div class="grow-container">
-
-            <div class="section-heading centered">
-
-                <span class="section-eyebrow">
-                   WHO WE SERVE
-                </span>
-
-                <h2>
-                    Solutions For
-                    <span>Every Grower.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="audience-grid">
-
-                <article class="audience-card">
-
-                    <i class="bi bi-house"></i>
-
-                    <h3>
-                        Home Growers
-                    </h3>
-
-                    <p>
-                        Compact systems and supplies for
-                        growing fresh plants at home.
-                    </p>
-
-                </article>
-
-
-                <article class="audience-card">
-
-                    <i class="bi bi-building"></i>
-
-                    <h3>
-                        Indoor Growers
-                    </h3>
-
-                    <p>
-                        Controlled growing products for
-                        indoor cultivation environments.
-                    </p>
-
-                </article>
-
-
-                <article class="audience-card">
-
-                    <i class="bi bi-shop"></i>
-
-                    <h3>
-                        Commercial Farms
-                    </h3>
-
-                    <p>
-                        Farming equipment and supplies for
-                        larger growing operations.
-                    </p>
-
-                </article>
-
-
-                <article class="audience-card">
-
-                    <i class="bi bi-grid"></i>
-
-                    <h3>
-                        Vertical Farms
-                    </h3>
-
-                    <p>
-                        Space-efficient systems for modern
-                        vertical cultivation.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-    <section class="grow-final" id="contact">
-
-        <div class="grow-final-background"></div>
-
-        <div class="grow-final-overlay"></div>
-
-        <div class="grow-final-content">
-
-            <span class="section-eyebrow">
-               START GROWING
-            </span>
-
-            <h2>
-                Ready To
-                <span>Grow With Us?</span>
-            </h2>
-
-            <p>
-                Tell us about your growing project and discover
-                products and solutions designed around your needs.
-            </p>
-
-            <div class="final-buttons">
-
-                <a href="contact.html"
-                    class="grow-btn grow-btn-primary">
-
-                    Start An Enquiry
-
-                    <i class="bi bi-arrow-up-right"></i>
-
-                </a>
-
-                <a href="products.html"
-                    class="grow-btn grow-btn-secondary">
-
-                    Explore Products
-
-                    <i class="bi bi-bag"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="footer-container">
-
-      
-        <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                <img src="images/logo-1.png"
-                     alt="GreenGrow Hydroponic and Vertical Farming Supplies">
-            </a>
-
-            <p>
-                Smart hydroponic and vertical farming supplies
-                for modern growers, sustainable farms and
-                productive growing spaces in green grow.
-            </p>
-
-            <div class="footer-social">
-
-                <a href="#" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
-                </a>
-
-                <a href="#" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-
-                <a href="#" aria-label="LinkedIn">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-
-                <a href="#" aria-label="YouTube">
-                    <i class="bi bi-youtube"></i>
-                </a>
-
-            </div>
-
-        </div>
 
 
       
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Products</a>
-                </li>
-
-                <li>
-                    <a href="solutions.html">Solutions</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-
-        </div>
-
-
-        
-        <div class="footer-column">
-
-            <h3>Solutions</h3>
-
-            <ul>
-                
-
-                <li>
-                    <a href="farming.html">
-                         Farming
-                    </a>
-                </li>
-
-                <li>
-                    <a href="products.html">Growing Systems</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Nutrients</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Farm Supplies</a>
-                </li>
-            </ul>
-
-        </div>
-
-
-        
-        <div class="footer-column">
-
-            <h3>Products</h3>
-
-            <ul>
-                <li>
-                    <a href="products.html">Hydroponic Kits</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Grow Lights</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Growing Media</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Pumps & Accessories</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Nutrients</a>
-                </li>
-            </ul>
-
-        </div>
-
-
-      
-        <div class="footer-column footer-contact">
-
-            <h3>Contact Us</h3>
-
-            <div class="contact-item">
-
-                <i class="bi bi-geo-alt-fill"></i>
-
-                <p>
-                    Hyderabad, Telangana,<br>
-                    India
-                </p>
-
-            </div>
-
-            <div class="contact-item">
-
-                <i class="bi bi-telephone-fill"></i>
-
-                <a href="tel:+919000000000">
-                    +91 90000 00000
-                </a>
-
-            </div>
-
-            <div class="contact-item">
-
-                <i class="bi bi-envelope-fill"></i>
-
-                <a href="mailto:info@greengrow.com">
-                    info@greengrow.com
-                </a>
-
-            </div>
-
-            <div class="contact-item">
-
-                <i class="bi bi-clock-fill"></i>
-
-                <p>
-                    Mon – Sat: 9:00 AM – 6:00 PM
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
   
-    <div class="footer-bottom">
-
-        <div class="footer-bottom-container">
-
-            <p>
-                © 2026 GreenGrow. All Rights Reserved.
-            </p>
-
-            <div class="footer-legal">
-
-                <a href="privacy-policy.html">
-                    Privacy Policy
-                </a>
-
-                <span></span>
-
-                <a href="terms.html">
-                    Terms & Conditions
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-
-
-
-
-
-    
-
-
-   
-    <script src="login.js"></script>
 
 </body>
 

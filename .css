@@ -6579,3 +6579,239 @@ html[dir="rtl"] .package-button i{
     transform:translateY(-10px) rotate(5deg);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<section class="growing-packages" id="pricing">
+
+  <div class="products-container">
+
+    <!-- Heading -->
+    <div class="packages-heading">
+      <span class="products-eyebrow">GROWING PACKAGES</span>
+
+      <h2>
+        Choose The Right
+        <span>Growing Package.</span>
+      </h2>
+
+      <p>
+        Flexible hydroponic growing packages designed for beginners,
+        serious growers, and commercial farming projects.
+      </p>
+    </div>
+
+
+    <!-- Pricing Grid -->
+    <div class="packages-grid">
+
+
+      <!-- BASIC PACKAGE -->
+      <article class="package-card">
+
+        <div class="package-top">
+          <span class="package-number">01</span>
+          <span class="package-label">STARTER</span>
+        </div>
+
+        <h3>Starter Grow</h3>
+
+        <p class="package-description">
+          Everything you need to begin growing fresh plants at home
+          with a simple hydroponic setup.
+        </p>
+
+        <div class="package-price">
+          <small>Starting From</small>
+
+          <strong>
+            <span class="rupee">₹</span>4,999
+          </strong>
+        </div>
+
+        <ul>
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Compact hydroponic growing system
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Seedling propagation tray
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Starter growing media
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Basic plant nutrients
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Beginner setup guide
+          </li>
+        </ul>
+
+        <a href="#" class="package-button package-button-secondary">
+          Get Started
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+      </article>
+
+
+
+      <!-- MOST POPULAR PACKAGE -->
+      <article class="package-card package-popular">
+
+        <div class="popular-badge">
+          MOST POPULAR
+        </div>
+
+        <div class="package-top">
+          <span class="package-number">02</span>
+          <span class="package-label">ADVANCED</span>
+        </div>
+
+        <h3>Smart Grow</h3>
+
+        <p class="package-description">
+          A complete growing solution for growers who want better
+          productivity, control, and consistency.
+        </p>
+
+        <div class="package-price">
+          <small>Starting From</small>
+
+          <strong>
+            <span class="rupee">₹</span>4,999
+          </strong>
+        </div>
+
+        <ul>
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Advanced hydroponic system
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            High-quality growing media
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Complete nutrient package
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Irrigation accessories
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            pH & EC monitoring support
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Grower setup assistance
+          </li>
+        </ul>
+
+        <a href="#" class="package-button package-button-primary">
+          Choose Smart Grow
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+      </article>
+
+
+
+      <!-- COMMERCIAL PACKAGE -->
+      <article class="package-card">
+
+        <div class="package-top">
+          <span class="package-number">03</span>
+          <span class="package-label">COMMERCIAL</span>
+        </div>
+
+        <h3>Farm Pro</h3>
+
+        <p class="package-description">
+          A scalable package designed for commercial growers,
+          vertical farms, and controlled growing environments.
+        </p>
+
+        <div class="package-price">
+          <small>Starting From</small>
+
+          <strong>
+            <span class="rupee">₹</span>9,999
+          </strong>
+        </div>
+
+        <ul>
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Commercial hydroponic system
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Modular growing racks
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Professional irrigation setup
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Complete crop nutrition
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Monitoring & control options
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Commercial project support
+          </li>
+        </ul>
+
+        <a href="#" class="package-button package-button-secondary">
+          Explore Farm Pro
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>

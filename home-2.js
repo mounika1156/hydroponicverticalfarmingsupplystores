@@ -759,43 +759,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
 
-  const faqItems = document.querySelectorAll(".premium-faq-item");
+    const faqItems =
+        document.querySelectorAll(".gg-faq-item");
 
-  faqItems.forEach(function (item) {
 
-    const button = item.querySelector(".premium-faq-question");
+    faqItems.forEach(function (item) {
 
-    button.addEventListener("click", function () {
+        const question =
+            item.querySelector(".gg-faq-question");
 
-      const isActive = item.classList.contains("active");
 
-      /* Close all */
-      faqItems.forEach(function (faq) {
+        question.addEventListener("click", function () {
 
-        faq.classList.remove("active");
+            const currentlyActive =
+                item.classList.contains("active");
 
-        const faqButton = faq.querySelector(".premium-faq-question");
 
-        if (faqButton) {
-          faqButton.setAttribute("aria-expanded", "false");
-        }
+            faqItems.forEach(function (faq) {
 
-      });
+                faq.classList.remove("active");
 
-      /* Open clicked item */
-      if (!isActive) {
+                const button =
+                    faq.querySelector(".gg-faq-question");
 
-        item.classList.add("active");
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-        button.setAttribute("aria-expanded", "true");
+            });
 
-      }
+
+            if (!currentlyActive) {
+
+                item.classList.add("active");
+
+                question.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+        });
 
     });
 
-  });
-
 });
+
+
