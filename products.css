@@ -434,13 +434,16 @@ html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
 
 
 
+
 .login-button {
-    width: 86px;
+    width: 120px;
     height: 40px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    padding: 10px 15px;
 
     background: var(--primary);
     color: #FFFFFF;
@@ -448,10 +451,18 @@ html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
     border: 1px solid var(--primary);
     border-radius: 10px;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
 
     cursor: pointer;
+
+    box-sizing: border-box;
 
     transition:
         background var(--transition),
@@ -459,8 +470,6 @@ html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
         transform var(--transition),
         box-shadow var(--transition);
 }
-
-
 
 .login-button:hover {
     background: var(--secondary);
@@ -471,6 +480,8 @@ html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
     box-shadow:
         0 8px 20px rgba(42, 157, 143, 0.20);
 }
+
+
 /* Medium */
 @media (max-width:1199px){
     .login-button{

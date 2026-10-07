@@ -423,12 +423,14 @@ html[dir="rtl"] .nav-dropdown-toggle i {
 
 
 .login-button {
-    width: 86px;
+    width: 120px;
     height: 40px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    padding: 10px 15px;
 
     background: var(--primary);
     color: #FFFFFF;
@@ -436,10 +438,18 @@ html[dir="rtl"] .nav-dropdown-toggle i {
     border: 1px solid var(--primary);
     border-radius: 10px;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
 
     cursor: pointer;
+
+    box-sizing: border-box;
 
     transition:
         background var(--transition),
@@ -447,8 +457,6 @@ html[dir="rtl"] .nav-dropdown-toggle i {
         transform var(--transition),
         box-shadow var(--transition);
 }
-
-
 
 .login-button:hover {
     background: var(--secondary);
